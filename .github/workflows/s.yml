@@ -1,4 +1,4 @@
-name: Build Obfuscate BPB Panel
+name: Build s
 
 on:
   push:
@@ -28,11 +28,11 @@ jobs:
         run: |
           npm install -g javascript-obfuscator
 
-      - name: Clone BPB workjs
+      - name: Clone s workjs
         run: |
           wget -O origin.js https://raw.githubusercontent.com/cmliu/edgetunnel/refs/heads/main/%E6%98%8E%E6%96%87%E6%BA%90%E7%A0%81.js
 
-      - name: Obfuscate BPB worker js
+      - name: Obfuscate s
         run: |
           javascript-obfuscator origin.js --output _worker.js \
           --compact true \
