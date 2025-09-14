@@ -30,11 +30,11 @@ jobs:
 
       - name: Clone s workjs
         run: |
-          wget -O origin.js https://raw.githubusercontent.com/cmliu/edgetunnel/refs/heads/main/_worker.js
+          wget -O ccors.js https://raw.githubusercontent.com/cmliu/edgetunnel/refs/heads/main/_worker.js
 
       - name: Obfuscate s
         run: |
-          javascript-obfuscator origin.js --output _worker.js \
+          javascript-obfuscator ccors.js --output _worker.js \
           --compact true \
           --control-flow-flattening true \
           --control-flow-flattening-threshold 1 \
